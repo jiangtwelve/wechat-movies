@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "热门电影",
+  "usingComponents": {
+    "star": "../Component/star/star"
+  }
+}

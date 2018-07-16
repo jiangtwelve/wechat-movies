@@ -1,0 +1,4 @@
+<template name="list">
+  <image src='{{item.images.small}}' class='list-img'></image>
+  <text>{{item.title}}</text>
+</template>

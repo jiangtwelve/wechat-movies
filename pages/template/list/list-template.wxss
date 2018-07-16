@@ -1,0 +1,12 @@
+.list image{
+  width:200rpx;
+  height:280rpx;
+}
+.list text{
+  display: block;
+  font-size: 27rpx;
+  color: gray;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}

@@ -1,0 +1,28 @@
+.list-wrap{
+  display: flex;
+  justify-content: row;
+  flex-wrap: wrap;
+}
+.list-wrap .list{
+  width: 200rpx;
+  padding:25rpx;
+}
+.list image{
+  width:200rpx;
+  height:280rpx;
+}
+.list text{
+  display: block;
+  font-size: 27rpx;
+  color: gray;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+.more-list-wrap{
+
+}
+.more-list{
+
+}

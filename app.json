@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/book/book",
+    "pages/Component/star/star",
+    "pages/details/details",
+    "pages/more/more"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#3C5E7E",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "电影",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "./images/tab/dianying.png",
+        "selectedIconPath": "./images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "图书",
+        "iconPath": "./images/tab/yuedu.png",
+        "selectedIconPath": "./images/tab/yuedu_hl.png"
+      }
+    ],
+    "color": "gray",
+    "selectedColor": "#3C5E7E",
+    "backgroundColor": "#E5E5E5",
+    "borderStyle": "white"
+  }
+}

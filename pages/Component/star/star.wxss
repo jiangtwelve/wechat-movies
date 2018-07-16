@@ -1,0 +1,13 @@
+/* pages/Component/star/star.wxss */
+.rating{
+  display: flex;
+  align-items: center;
+}
+.rating image{
+  width: 20rpx;
+  height: 20rpx;
+  margin: 5rpx;
+}
+.rating text{
+  padding-left: 20rpx;
+}

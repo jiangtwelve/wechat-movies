@@ -1,0 +1,80 @@
+<!--详情 title  -->
+<view class='details-title-wrap' style='background-image:url({{ theDetails.images.small }})'>
+  <!--遮罩层  -->
+  <view class='bg-black'></view>
+  <!--title开始  -->
+  <view class='details-title'>
+    <!--名字  -->
+    <text class='details-name'>{{theDetails.title}}</text>
+    <!--国家 年份  -->
+    <view class='detail-year-countries'>
+      <text>{{theDetails.countries[0]}}</text>
+      <text>·</text>
+      <text>{{ theDetails.year }}</text>
+    </view>
+    <!--喜欢人数 评论数  -->
+    <view class='details-like'>
+      <text>{{ theDetails.ratings_count }}</text>
+      <text>人想看</text>
+      <text>{{ theDetails.reviews_count }}</text>
+      <text>条评论</text>
+    </view>
+    <image src='{{ theDetails.images.small }}' class='detail-title-img'></image>
+  </view>
+</view>
+<view class='details-role'>
+  <view class='details-rating'>
+    <text class='details-role-name'>{{ theDetails.title }}</text>
+  </view>
+  <!--评分  -->
+  <view class='details-rating'>
+    <text class='details-role-title'>评分</text>
+    <text class='details-padding'></text>
+    <star rating="{{ theDetails.rating.average }}"></star>
+  </view>
+  <!--导演  -->
+  <view class='details-directors'>
+    <text class='details-role-title'>导演</text>
+    <text class='details-padding'></text>
+    <view wx:for="{{theDetails.directors}}" wx:key="{{item.id}}">
+      <text>{{ item.name }}</text>
+      <text wx:if="{{index+1 != directorsLength}}" class='details-padding-small'>/</text>
+    </view>
+  </view>
+  <!--影人  -->
+  <view class='details-writers'>
+    <text class='details-role-title'>影人</text>
+    <text class='details-padding'></text>
+    <view wx:for="{{theDetails.writers}}" wx:key="{{item.id}}">
+      <text>{{ item.name }}</text>
+      <text wx:if="{{index+1 != writersLength}}" class='details-padding-small'>/</text>
+    </view>
+  </view>
+  <!--类型  -->
+  <view class='details-genres'>
+    <text class='details-role-title'>类型</text>
+    <text class='details-padding'></text>
+    <view wx:for="{{theDetails.genres}}" wx:key="{{item}}">
+      <text>{{ item }}</text>
+      <text wx:if="{{index+1 != genresLength}}" class='details-padding-small'>/</text>
+    </view>
+  </view>
+</view>
+<view class='details-brief'>
+  <view  class='details-brief-title'>
+    <text>剧情简介</text>
+  </view>
+  <text class='details-brief-summary'>{{ theDetails.summary }}</text>
+</view>
+<view class='details-actor'>
+  <view  class='details-brief-title'>
+    <text>影人</text>
+  </view>
+  <view class='details-actor-img'>
+    <!--演员列表  -->
+    <view class='actor-list' wx:for="{{theDetails.casts}}" wx:key="{{item.id}}">
+      <image src='{{item.avatars.small}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>

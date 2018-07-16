@@ -1,0 +1,15 @@
+<!--导入模板  -->
+<import src="../template/list/list-template.wxml" />
+  <!--列表  -->
+  <view class='list-wrap more-list-wrap'>
+    <view
+      class='list more-list' 
+      wx:for='{{thisListArr}}' 
+      wx:key="{{ item.id }}" 
+      data-id="{{item.id}}"
+      data-url="movie/in_theaters"
+      bindtap='toDetails'>
+      <template is='list' data="{{item}}"/>
+      <star rating="{{ item.rating.average }}"></star>
+    </view>
+  </view>

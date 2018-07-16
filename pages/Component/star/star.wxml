@@ -1,0 +1,10 @@
+<!--pages/Component/star/star.wxml-->
+<view class='rating'>
+  <block wx:for='{{ havStarNum }}' wx:key="{{havStarNum}}">
+    <image src='../../../images/icon/star.png'></image>
+  </block>
+  <block wx:for='{{ 5-havStarNum }}' wx:key="{{5-havStarNum}}">
+    <image src='../../../images/icon/none-star.png'></image>
+  </block>
+  <text>{{ ratings }}</text>
+</view>

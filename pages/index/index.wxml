@@ -1,0 +1,89 @@
+<!--导入模板  -->
+<import src="../template/list/list-template.wxml" />
+<!--顶部搜索栏  -->
+<view class='search-wrap'>
+  <image src='../../images/icon/search.png'></image>
+  <input
+   id='search'
+   type='text' 
+   placeholder="釜山行,夏有乔木仰望天堂" 
+   placeholder-style="color:gray"
+   bindblur="outFocus"
+   confirm-type="search"
+   value='{{inputValue}}'
+   ></input>
+</view>
+
+<view class='movieList-wrap'>
+  <!--列表头部  -->
+  <view class='movie-header'>
+    <text>正在热映</text>
+    <view class='more-btn' data-api="movie/in_theaters" bindtap='toMore'>
+      <text>更多</text>
+      <image src='../../images/icon/arrow-right.png'></image>
+    </view>
+  </view>
+  <!--列表本体  -->
+  <view class='list-wrap'>
+    <view
+      class='list' 
+      wx:for='{{inTheaters}}' 
+      wx:if='{{index<3}}' 
+      wx:key="{{ item.id }}" 
+      data-id="{{item.id}}"
+      data-url="movie/in_theaters" 
+      bindtap='toDetails'>
+      <template is='list' data="{{item}}"/>
+      <star rating="{{ item.rating.average }}"></star>
+    </view>
+  </view>
+</view>
+
+<view class='movieList-wrap'>
+  <!--列表头部  -->
+  <view class='movie-header'>
+    <text>即将上映</text>
+    <view class='more-btn' data-api="movie/coming_soon" bindtap='toMore'>
+      <text>更多</text>
+      <image src='../../images/icon/arrow-right.png'></image>
+    </view>
+  </view>
+  <!--列表本体  -->
+  <view class='list-wrap'>
+    <view class='list' 
+      wx:for='{{comingSoon}}' 
+      wx:if='{{index<3}}' 
+      wx:key="{{ item.id }}"
+      data-url="movie/coming_soon" 
+      data-id="{{item.id}}" 
+      bindtap='toDetails'>
+      <template is='list' data="{{item}}"/>
+      <star rating="{{ item.rating.average }}"></star>
+    </view>
+  </view>
+</view>
+
+<view class='movieList-wrap'>
+  <!--列表头部  -->
+  <view class='movie-header'>
+    <text>top250</text>
+    <view class='more-btn' data-api="movie/top250?star=2&count=20" bindtap='toMore'>
+      <text>更多</text>
+      <image src='../../images/icon/arrow-right.png'></image>
+    </view>
+  </view>
+  <!--列表本体  -->
+  <view class='list-wrap'>
+    <view 
+      class='list' 
+      wx:for='{{top}}' 
+      wx:if='{{index<3}}' 
+      wx:key="{{ item.id }}" 
+      data-url="movie/top250" 
+      data-id="{{item.id}}" 
+      bindtap='toDetails'>
+      <template is='list' data="{{item}}"/>
+      <star rating="{{ item.rating.average }}"></star>
+    </view>
+  </view>
+</view>

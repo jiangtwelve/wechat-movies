@@ -1,0 +1,146 @@
+page{
+  background: white;
+}
+.details-title-wrap{
+  width: 750rpx;
+  height: 350rpx;
+  position: relative;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.bg-black{
+  display:block;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8
+}
+.details-title{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display:block;
+  width:100%;
+  height:100%;
+  color:white;
+  padding:40rpx;
+  box-sizing: border-box;
+  font-size:30rpx;
+}
+.details-name{
+  display:block;
+  font-size:40rpx;
+  font-weight:500;
+  letter-spacing:5rpx;
+}
+.detail-year-countries{
+  padding:50rpx 0;
+  font-weight:200;
+}
+.detail-year-countries text:nth-child(2){
+  padding:0 10rpx;
+}
+.details-like{
+  font-size:25rpx;
+  color:gray;
+}
+.details-like text{
+  margin-right: 15rpx;
+}
+.details-like text:nth-child(1),.details-like text:nth-child(3){
+  color: red;
+}
+.detail-title-img{
+  position: absolute;
+  display: block;
+  top:40%;
+  left:65%;
+  width:220rpx;
+  height:300rpx;
+}
+
+.details-role{
+  font-size: 27rpx;
+  padding: 40rpx;
+  color: gray;
+  font-weight: 200;
+  border-bottom:4rpx solid rgb(242, 242, 242);
+}
+.details-role view{
+  padding: 5rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: row;
+}
+.details-role-name{
+  color:rgb(114,114,114);
+  padding-bottom:20rpx;
+  font-size:27rpx;
+  font-weight:400;
+  letter-spacing:5rpx;
+}
+.details-padding{
+  padding-left: 30rpx;
+}
+.details-padding-small{
+  padding: 0 10rpx;
+}
+.details-role-title{
+  color: #B4B4B4;
+  font-size: 29rpx;
+}
+.details-directors{
+
+}
+.details-writers{
+
+}
+.details-genres{
+
+}
+
+.details-brief{
+  font-size: 27rpx;
+  padding: 40rpx;
+  color: gray;
+  font-weight: 200;
+  border-bottom:4rpx solid rgb(242, 242, 242);
+}
+.details-brief-title{
+  padding:15rpx 0;
+  font-size:30rpx;
+  color:#b4b4b4;
+}
+.details-brief-title text{
+
+}
+.details-brief-summary{
+  line-height: 1.8
+}
+
+.details-actor{
+  font-size: 27rpx;
+  color: gray;
+  font-weight: 200;
+  white-space:nowrap;
+  padding: 40rpx 0 40rpx 40rpx;
+  overflow-x: scroll;
+}
+.actor-list{
+  display: inline-block;
+  margin-right:40rpx;
+}
+.actor-list image,.actor-list text{
+  display: block;
+}
+.actor-list text{
+  text-align: center;
+  padding: 10rpx 0;
+}
+.actor-list image{
+  width: 250rpx;
+  height: 350rpx;
+}
